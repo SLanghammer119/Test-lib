@@ -48,8 +48,8 @@ import javax.imageio.ImageIO;
     , @NamedQuery(name = "Article.findByArticleno", query = "SELECT a FROM Article a WHERE a.articleno = :articleno")
     , @NamedQuery(name = "Article.findByName", query = "SELECT a FROM Article a WHERE a.name = :name")
     , @NamedQuery(name = "Article.findByPrice", query = "SELECT a FROM Article a WHERE a.price = :price")
-    , @NamedQuery(name = "Articles.findBySubcategory", query = "SELECT a FROM Article a JOIN a.Subcategory s WHERE s.subcatname = :subcatname")
-    , @NamedQuery(name = "Articles.findByPrimecategory", query = "SELECT a FROM Article a JOIN a.Subcategory s JOIN s.Primecategory p WHERE p.primename = :primename")})
+    , @NamedQuery(name = "Articles.findBySubcategory", query = "SELECT a FROM Article a JOIN a.subcategory s WHERE s.subcatname = :subcatname")
+    , @NamedQuery(name = "Articles.findByPrimecategory", query = "SELECT a FROM Article a JOIN a.subcategory s JOIN s.primecategory p WHERE p.primename = :primename")})
 public class Article implements Serializable {
 
     private static final long serialVersionUID = 1L;
