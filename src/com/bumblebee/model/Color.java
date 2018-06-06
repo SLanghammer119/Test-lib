@@ -6,6 +6,7 @@
 package com.bumblebee.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -44,20 +45,27 @@ public class Color implements Serializable {
     private String color;
     
     @Lob
-    @Column(name = "colorphoto")
-    private byte[] colorphoto;
+    @Column(name = "colorcode")
+    private String colorcode;
     
     
     @OneToMany(targetEntity=Articlecolor.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "color")
     private List<Articlecolor> articlecolors;
 
     public Color() {
+//        articlecolors = new ArrayList<>();
     }
 
-    public Color(int colid, String color, byte[] colorphoto, List<Articlecolor> articlecolors) {
+    public Color(String color) {
+        this.color = color;
+    }
+    
+    
+
+    public Color(int colid, String color, String colorcode, List<Articlecolor> articlecolors) {
         this.colid = colid;
         this.color = color;
-        this.colorphoto = colorphoto;
+        this.colorcode = colorcode;
         this.articlecolors = articlecolors;
     }
     
@@ -80,12 +88,12 @@ public class Color implements Serializable {
         this.color = color;
     }
 
-    public byte[] getColorphoto() {
-        return colorphoto;
+    public String getColorcode() {
+        return colorcode;
     }
 
-    public void setColorphoto(byte[] colorphoto) {
-        this.colorphoto = colorphoto;
+    public void setColorcode(String colorcode) {
+        this.colorcode = colorcode;
     }
 
     public List<Articlecolor> getArticlecolors() {

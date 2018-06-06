@@ -112,24 +112,29 @@ public class Article implements Serializable {
         articlematerials = new ArrayList<>();
         articlesizes = new ArrayList<>();
         articlecolors = new ArrayList<>();
-
+        color = new Color();
+        size = new Unit();
+        care = new Care();
+       
     }
 
     Article(Article a) {
+        articledescriptions = new ArrayList<>();
+        articlematerials = new ArrayList<>();
+        articlesizes = new ArrayList<>();
+        articlecolors = new ArrayList<>();
+        color = new Color();
+        size = new Unit();
+        care = new Care();
         this.artid = a.getArtid();
         this.articleno = a.getArticleno();
         this.name = a.getName();
         this.price = a.getPrice();
         this.photo = a.getPhoto();
-        this.articledescriptions = new ArrayList<>(a.getArticledescriptions());
-        this.articlematerials = new ArrayList<>(a.getArticlematerials());
-        this.care = new Care();
+        this.articledescriptions = a.getArticledescriptions();
+        this.articlematerials = a.getArticlematerials();
         setCare(a.getCare());
-        this.subcategory = new Subcategory();
-        setSubcategory(a.getSubcategory());
-        this.color = new Color();
         setColor(a.getColor());
-        this.size = new Unit();
         setSize(a.getSize());
     }
 
@@ -252,5 +257,7 @@ public class Article implements Serializable {
     public void setSize(Unit size) {
         this.size = size;
     }
+    
+    
 
 }
