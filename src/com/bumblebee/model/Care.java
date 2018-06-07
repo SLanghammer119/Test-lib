@@ -54,11 +54,7 @@ public class Care implements Serializable {
     public Care() {
     }
 
-    public Care(Integer careid) {
-        this.careid = careid;
-    }
-
-    public Care(Integer careid, String carename, byte[] carephoto) {
+    public Care(int careid, String carename, byte[] carephoto) {
         this.careid = careid;
         this.carename = carename;
         this.carephoto = carephoto;

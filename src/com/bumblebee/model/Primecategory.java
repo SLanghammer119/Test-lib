@@ -37,7 +37,7 @@ public class Primecategory implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "primeid", nullable = false)
-    private Integer primeid;
+    private int primeid;
     
     @Column(name = "primename", length = 100)
     private String primename;
@@ -49,16 +49,16 @@ public class Primecategory implements Serializable {
     public Primecategory() {
     }
 
-    public Primecategory(Integer primeid, String primename) {
+    public Primecategory(int primeid, String primename) {
         this.primeid = primeid;
         this.primename = primename;
     }
 
-    public Integer getPrimeid() {
+    public int getPrimeid() {
         return primeid;
     }
 
-    public void setPrimeid(Integer primeid) {
+    public void setPrimeid(int primeid) {
         this.primeid = primeid;
     }
 

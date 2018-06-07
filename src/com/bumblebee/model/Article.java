@@ -112,30 +112,26 @@ public class Article implements Serializable {
         articlematerials = new ArrayList<>();
         articlesizes = new ArrayList<>();
         articlecolors = new ArrayList<>();
+        subcategory = new Subcategory();
         color = new Color();
         size = new Unit();
         care = new Care();
-       
     }
 
-    Article(Article a) {
-        articledescriptions = new ArrayList<>();
-        articlematerials = new ArrayList<>();
-        articlesizes = new ArrayList<>();
-        articlecolors = new ArrayList<>();
-        color = new Color();
-        size = new Unit();
-        care = new Care();
-        this.artid = a.getArtid();
-        this.articleno = a.getArticleno();
-        this.name = a.getName();
-        this.price = a.getPrice();
-        this.photo = a.getPhoto();
-        this.articledescriptions = a.getArticledescriptions();
-        this.articlematerials = a.getArticlematerials();
-        setCare(a.getCare());
-        setColor(a.getColor());
-        setSize(a.getSize());
+    public Article(int artid, String articleno, String name, Double price, byte[] photo, Care care, Subcategory sub, List<Articlecolor> articlecolors, List<Articledescriptions> articledescriptions, List<Articlematerials> articlematerials, List<Articlesize> articlesizes, Color col, Unit size) {
+        this.artid = artid;
+        this.articleno = articleno;
+        this.name = name;
+        this.price = price;
+        this.photo = photo;
+        this.care = new Care(care.getCareid(), care.getCarename(), care.getCarephoto());
+        this.subcategory = new Subcategory(sub.getSubcatid(), sub.getSubcatname(), sub.getPrimecategory());
+        this.articlecolors = new ArrayList<>(articlecolors);
+        this.articledescriptions = new ArrayList<>(articledescriptions);
+        this.articlematerials = new ArrayList<>(articlematerials);
+        this.articlesizes = new ArrayList<>(articlesizes);
+        this.color = new Color(col.getColid(), col.getColor(), col.getColorcode());
+        this.size = new Unit(size.getUnitid(), size.getUnit());
     }
 
     public int getArtid() {

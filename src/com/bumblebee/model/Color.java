@@ -56,17 +56,18 @@ public class Color implements Serializable {
 //        articlecolors = new ArrayList<>();
     }
 
-    public Color(String color) {
-        this.color = color;
-    }
-    
-    
-
+    //noch lassen wegen im Warenkorb Änderung der Farbe auf eine andere
     public Color(int colid, String color, String colorcode, List<Articlecolor> articlecolors) {
         this.colid = colid;
         this.color = color;
         this.colorcode = colorcode;
-        this.articlecolors = articlecolors;
+        this.articlecolors = new ArrayList<>(articlecolors);
+    }
+
+    public Color(int colid, String color, String colorcode) {
+        this.colid = colid;
+        this.color = color;
+        this.colorcode = colorcode;
     }
     
     

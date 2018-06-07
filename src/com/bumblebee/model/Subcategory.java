@@ -54,12 +54,24 @@ public class Subcategory implements Serializable {
     private List<Article> articles;
 
     public Subcategory() {
+        primecategory = new Primecategory();
     }
 
     public Subcategory(int subcatid, String subcatname) {
         this.subcatid = subcatid;
         this.subcatname = subcatname;
     }
+    
+    
+    public Subcategory(int subcatid, String subcatname, Primecategory prime) {
+        this.subcatid = subcatid;
+        this.subcatname = subcatname;
+        this.primecategory = new Primecategory(prime.getPrimeid(), prime.getPrimename());
+    }
+    
+    
+    
+    
 
     public int getSubcatid() {
         return subcatid;

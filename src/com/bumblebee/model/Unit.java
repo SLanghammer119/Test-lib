@@ -49,6 +49,11 @@ public class Unit implements Serializable {
     public Unit() {
     }
 
+    public Unit(int unitid, String unit) {
+        this.unitid = unitid;
+        this.unit = unit;
+    }
+
     public int getUnitid() {
         return unitid;
     }
