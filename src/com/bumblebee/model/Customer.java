@@ -110,160 +110,163 @@ public class Customer implements Serializable {
     
     public Customer() {
         setCategory("user");
-        deliveryadresses = new ArrayList<>();
-        creditcard = new Creditcard();
-        bankaccount = new Bankaccount();  
+//        deliveryadresses = new ArrayList<>();
+//        creditcard = new Creditcard();
+//        bankaccount = new Bankaccount();  
     }
 
     public int getCustid() {
         return custid;
     }
 
-    public void setCustid(int custid) {
-        this.custid = custid;
-    }
-    
-    public String getCustomerno() {
-        return customerno;
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
 
-    public void setCustomerno(String customerno) {
-        this.customerno = customerno;
+    public String getCustomerno() {
+        return customerno;
     }
 
     public String getFirstname() {
         return firstname;
     }
 
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-
     public String getLastname() {
         return lastname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
     }
 
     public String getStreet() {
         return street;
     }
 
-    public void setStreet(String street) {
-        this.street = street;
-    }
-
     public String getHouseno() {
         return houseno;
-    }
-
-    public void setHouseno(String houseno) {
-        this.houseno = houseno;
     }
 
     public String getPostcode() {
         return postcode;
     }
 
-    public void setPostcode(String postcode) {
-        this.postcode = postcode;
-    }
-
     public String getTown() {
         return town;
-    }
-
-    public void setTown(String town) {
-        this.town = town;
     }
 
     public String getCountry() {
         return country;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
     public String getPhone() {
         return phone;
-    }
-
-    public void setPhone(String phone) {
-        this.phone = phone;
     }
 
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public String getPassword() {
         return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     public String getCategory() {
         return category;
     }
 
+    public List<Deliveryadresses> getDeliveryadresses() {
+        if(deliveryadresses==null){
+            deliveryadresses = new ArrayList<>();
+        }
+        return deliveryadresses;
+    }
+
+    public Bankaccount getBankaccount() {
+        if(bankaccount==null){
+            bankaccount = new Bankaccount();
+        }
+        return bankaccount;
+    }
+
+    public Creditcard getCreditcard() {
+        if(creditcard==null){
+            creditcard = new Creditcard();
+        }
+        return creditcard;
+    }
+
+    public Shoppingcart getShoppingcart() {
+        return shoppingcart;
+    }
+
+    public void setCustid(int custid) {
+        this.custid = custid;
+    }
+
+    public void setCustomerno(String customerno) {
+        this.customerno = customerno;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public void setStreet(String street) {
+        this.street = street;
+    }
+
+    public void setHouseno(String houseno) {
+        this.houseno = houseno;
+    }
+
+    public void setPostcode(String postcode) {
+        this.postcode = postcode;
+    }
+
+    public void setTown(String town) {
+        this.town = town;
+    }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public void setCategory(String category) {
         this.category = category;
     }
 
-//    @XmlTransient
-//    public Collection<Shoppingcarts> getShoppingcartsCollection() {
-//        return shoppingcartsCollection;
-//    }
-//
-//    public void setShoppingcartsCollection(Collection<Shoppingcarts> shoppingcartsCollection) {
-//        this.shoppingcartsCollection = shoppingcartsCollection;
-//    }
-//
-//    @XmlTransient
-//    public Collection<Deliveryadresses> getDeliveryadressesCollection() {
-//        return deliveryadressesCollection;
-//    }
-//
-//    public void setDeliveryadressesCollection(Collection<Deliveryadresses> deliveryadressesCollection) {
-//        this.deliveryadressesCollection = deliveryadressesCollection;
-//    }
-//
-//    @XmlTransient
-//    public Collection<Bankaccounts> getBankaccountsCollection() {
-//        return bankaccountsCollection;
-//    }
-//
-//    public void setBankaccountsCollection(Collection<Bankaccounts> bankaccountsCollection) {
-//        this.bankaccountsCollection = bankaccountsCollection;
-//    }
-//
-//    @XmlTransient
-//    public Collection<Creditcards> getCreditcardsCollection() {
-//        return creditcardsCollection;
-//    }
-//
-//    public void setCreditcardsCollection(Collection<Creditcards> creditcardsCollection) {
-//        this.creditcardsCollection = creditcardsCollection;
-//    }
-//
-//    @XmlTransient
-//    public Collection<Orders> getOrdersCollection() {
-//        return ordersCollection;
-//    }
-//
-//    public void setOrdersCollection(Collection<Orders> ordersCollection) {
-//        this.ordersCollection = ordersCollection;
-//    }
-//    
+    public void setDeliveryadresses(List<Deliveryadresses> deliveryadresses) {
+        this.deliveryadresses = deliveryadresses;
+    }
+
+    public void setBankaccount(Bankaccount bankaccount) {
+        this.bankaccount = bankaccount;
+    }
+
+    public void setCreditcard(Creditcard creditcard) {
+        this.creditcard = creditcard;
+    }
+
+    public void setShoppingcart(Shoppingcart shoppingcart) {
+        this.shoppingcart = shoppingcart;
+    }
+
+    
+
+
     
     
 }

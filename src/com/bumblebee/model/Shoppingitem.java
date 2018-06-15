@@ -57,7 +57,7 @@ public class Shoppingitem implements Serializable {
 
     
     public Shoppingitem(Article a) {
-        article = new Article(a.getArtid(), a.getArticleno(), a.getName(), a.getPrice(), a.getPhoto(), a.getCare(), a.getSubcategory(), a.getArticlecolors(), a.getArticledescriptions(), a.getArticlematerials(), a.getArticlesizes(), a.getColor(), a.getSize());
+        article = new Article(a.getArtid(), a.getArticleno(), a.getName(), a.getPrice(), a.getPhoto(), a.getColor(), a.getSize());
         this.number=0;
         this.totalLine=0.00;
     }

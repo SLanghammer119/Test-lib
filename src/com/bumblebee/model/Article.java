@@ -133,6 +133,17 @@ public class Article implements Serializable {
         this.color = new Color(col.getColid(), col.getColor(), col.getColorcode());
         this.size = new Unit(size.getUnitid(), size.getUnit());
     }
+    
+    public Article(int artid, String articleno, String name, Double price, byte[] photo, Color col, Unit size) {
+        this.artid = artid;
+        this.articleno = articleno;
+        this.name = name;
+        this.price = price;
+        this.photo = photo;
+        this.color = new Color(col.getColid(), col.getColor(), col.getColorcode());
+        this.size = new Unit(size.getUnitid(), size.getUnit());
+    }
+    
 
     public int getArtid() {
         return artid;

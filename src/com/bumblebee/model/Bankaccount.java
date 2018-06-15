@@ -84,6 +84,8 @@ public class Bankaccount implements Serializable {
         this.bankid = bankid;
     }
 
+    
+
    
 
     public String getFirstname() {

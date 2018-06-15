@@ -66,6 +66,9 @@ public class Shoppingcart implements Serializable {
     public Shoppingcart() {
         customer = new Customer();
         shoppingitems = new ArrayList<>();
+        this.shipping=0.00;
+        this.total=0.00;
+        
     }
 
 
@@ -120,6 +123,10 @@ public class Shoppingcart implements Serializable {
 
     public void setShoppingitems(List<Shoppingitem> shoppingitems) {
         this.shoppingitems = shoppingitems;
+    }
+
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
     }
     
     
